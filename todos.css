@@ -4,6 +4,12 @@
 	font-family: 'Roboto', sans-serif;
 }
 
+button,
+input {
+	padding: 0.2rem;
+	border-radius: 0.3rem;
+}
+
 #wrapper {
 	display: flex;
 	flex-direction: column;
@@ -13,24 +19,30 @@
 		margin-top: 1vh;
 		display: flex;
 		flex-direction: column;
+
+		label {
+			font-style: italic;
+		}
+
+		button:disabled {
+			background-color: #cccccc;
+			transition: color 2s ease-out;
+		}
+
+		button:enabled {
+			background-color: green;
+			transition: color 2s ease-out;
+		}
 	}
 
-	label {
-		font-style: italic;
-	}
+	ul {
+		margin-top: 1rem;
+		li {
+			list-style: none;
 
-	input,
-	button {
-		padding: 0.3rem;
-	}
-
-	button:disabled {
-		background-color: #cccccc;
-		transition: color 2s ease-out;
-	}
-
-	button:enabled {
-		background-color: green;
-		transition: color 2s ease-out;
+			button {
+				background-color: cadetblue;
+			}
+		}
 	}
 }
