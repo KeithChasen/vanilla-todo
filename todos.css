@@ -23,4 +23,14 @@
 	button {
 		padding: 0.3rem;
 	}
+
+	button:disabled {
+		background-color: #cccccc;
+		transition: color 2s ease-out;
+	}
+
+	button:enabled {
+		background-color: green;
+		transition: color 2s ease-out;
+	}
 }
