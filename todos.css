@@ -1,0 +1,26 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+#wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.todo-form {
+		margin-top: 1vh;
+		display: flex;
+		flex-direction: column;
+	}
+
+	label {
+		font-style: italic;
+	}
+
+	input,
+	button {
+		padding: 0.3rem;
+	}
+}
