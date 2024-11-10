@@ -67,13 +67,23 @@ function renderTodoInEditMode(todo) {
 	return li;
 }
 function addTodo() {
-	//todo: implement
+	const description = addTodoInput.value;
+
+	todos.push(description);
+	const todo = renderTodoInReadMode(description);
+	todoList.append(todo);
+
+	addTodoInput.value = '';
+	addTodoButton.disabled = true;
 }
 
 function updateTodo(idx, description) {
-	//todo: implement
+	todos[idx] = description;
+	const todo = renderTodoInReadMode(description);
+	todoList.replaceChild(todo, todoList.childNodes[idx]);
 }
 
 function removeTodo(idx) {
-	//todo: implement
+	todos.splice(idx, 1);
+	todoList.childNodes[idx].remove();
 }
