@@ -73,6 +73,12 @@ function renderTodoInEditMode(todo) {
 }
 function addTodo() {
 	const description = addTodoInput.value;
+
+	if (todos.find(todo => todo.description === description)) {
+		alert('such todo is already added');
+		return;
+	}
+
 	const newTodo = {
 		description,
 		done: false,
